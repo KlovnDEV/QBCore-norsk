@@ -8,29 +8,27 @@
 
 Vores sider:
   • Hjemmesiden: https://fivem.dk
-  • Patreon: https://patreon.com/dkfivem
-  • Facebook: https://facebook.com/dkfivem
-  • Discord: https://discord.gg/dkfivem
-  • DybHosting: https://dybhosting.eu/ - Rabatkode: dkfivem10
+  • Facebook: https://facebook.com/raino.krogh.1
+  • Discord: https://discord.gg/BWxh35wBZ4
 ]]
 
 local banlength = nil
 local banreason = 'Unknown'
 local kickreason = 'Unknown'
 
-local menu = MenuV:CreateMenu(false, 'Admin menuen', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test')
-local menu2 = MenuV:CreateMenu(false, 'Admin menuen', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test1')
-local menu4 = MenuV:CreateMenu(false, 'Online spillere', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test3')
-local menu5 = MenuV:CreateMenu(false, 'Server funktioner', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test4')
-local menu6 = MenuV:CreateMenu(false, 'Vejr funktioner', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test5')
-local menu7 = MenuV:CreateMenu(false, 'Dealer listen', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test6')
-local menu8 = MenuV:CreateMenu(false, 'Ban', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test7')
-local menu9 = MenuV:CreateMenu(false, 'Kick', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test8')
+local menu = MenuV:CreateMenu(false, 'Admin Meny', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test')
+local menu2 = MenuV:CreateMenu(false, 'Admin Meny', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test1')
+local menu4 = MenuV:CreateMenu(false, 'Pålogget spillere', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test3')
+local menu5 = MenuV:CreateMenu(false, 'Server Funksjonr', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test4')
+local menu6 = MenuV:CreateMenu(false, 'Vær Funksjonr', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test5')
+local menu7 = MenuV:CreateMenu(false, 'Drug-dealer liste', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test6')
+local menu8 = MenuV:CreateMenu(false, 'Utestengelse', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test7')
+local menu9 = MenuV:CreateMenu(false, 'Spark Ut', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test8')
 local menu10 = MenuV:CreateMenu(false, 'Permissions', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test9')
-local menu11 = MenuV:CreateMenu(false, 'Udvikler funktioner', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test10')
-local menu12 = MenuV:CreateMenu(false, 'Køretøjs handlinger', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test11')
-local menu13 = MenuV:CreateMenu(false, 'Køretøjs kategori', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test12')
-local menu14 = MenuV:CreateMenu(false, 'Køretøjs modeller', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test13')
+local menu11 = MenuV:CreateMenu(false, 'Utvikler Funksjoner', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test10')
+local menu12 = MenuV:CreateMenu(false, 'Kjøretøy handlinger', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test11')
+local menu13 = MenuV:CreateMenu(false, 'Kjøretøy kategori', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test12')
+local menu14 = MenuV:CreateMenu(false, 'Kjøretøy modeller', 'topright', 220, 20, 60, 'size-125', 'none', 'menuv', 'test13')
 
 RegisterNetEvent('qb-admin:client:openMenu')
 AddEventHandler('qb-admin:client:openMenu', function()
@@ -41,25 +39,25 @@ local menu_button = menu:AddButton({
     icon = '😃',
     label = 'Admin menuen',
     value = menu2,
-    description = 'Misc. Admin menuen'
+    description = 'Misc. Admin Meny'
 })
 local menu_button2 = menu:AddButton({
     icon = '🙍‍♂️',
-    label = 'Spiller Funktioner',
+    label = 'Spiller Funksjoner',
     value = menu4,
     description = 'Se oversigt over spillere'
 })
 local menu_button3 = menu:AddButton({
     icon = '🎮',
-    label = 'Server funktioner',
+    label = 'Server Funksjoner',
     value = menu5,
-    description = 'Misc. Server funktioner'
+    description = 'Misc. Server Funksjoner'
 })
 local menu_button21 = menu:AddButton({
     icon = '🚗',
-    label = 'Køretøjer',
+    label = 'Kjøretøy',
     value = menu12,
-    description = 'Køretøjs funktioner'
+    description = 'Kjøretøy Funksjoner'
 })
 local menu_button4 = menu:AddButton({
     icon = '💊',
@@ -71,31 +69,31 @@ local menu_button5 = menu2:AddCheckbox({
     icon = '🎥',
     label = 'NoClip',
     value = menu2,
-    description = 'Slå til/fra NoClip'
+    description = 'Aktiver/Deaktiver NoClip'
 })
 local menu_button6 = menu2:AddButton({
     icon = '🏥',
     label = 'Genopliv',
     value = 'revive',
-    description = 'Genopliv dig selv'
+    description = 'Revive deg selv'
 })
 local menu_button7 = menu2:AddCheckbox({
     icon = '👻',
     label = 'Usynlig',
     value = menu2,
-    description = 'Slå til/fra usynlighed'
+    description = 'Invisible'
 })
 local menu_button8 = menu2:AddCheckbox({
     icon = '⚡',
     label = 'Godmode',
     value = menu2,
-    description = 'Slå til/fra God Mode'
+    description = 'God Mode'
 })
 local menu_button11 = menu5:AddButton({
     icon = '🌡️',
-    label = 'Vejr funktioner',
+    label = 'Vær Funksjoner',
     value = menu6,
-    description = 'Ændre vejret'
+    description = 'Endre Været'
 })
 local menu_button13 = menu5:AddSlider({
     icon = '⏲️',
@@ -205,13 +203,13 @@ menu_button11:On("select",function()
     local elements = {
         [1] = {
             icon = '☀️',
-            label = 'Høj sol',
+            label = 'Høy Sol',
             value = "EXTRASUNNY",
             description = 'Hedebølge!'
         },
         [2] = {
             icon = '☀️',
-            label = 'Skyfrit',
+            label = 'Skyfritt',
             value = "CLEAR",
             description = 'En vidunderlig dag!'
         },
@@ -223,33 +221,33 @@ menu_button11:On("select",function()
         },
         [4] = {
             icon = '🌁',
-            label = 'Røg',
+            label = 'Tåket 1',
             value = "SMOG",
-            description = 'Der er røg overalt!'
+            description = 'Det er tåke overalt!'
         },
         [5] = {
             icon = '🌫️',
-            label = 'Tåget',
+            label = 'Tåke 2',
             value = "FOGGY",
-            description = 'Mose konen brygger!'
+            description = 'Tåke 2!'
         },
         [6] = {
             icon = '⛅',
-            label = 'Overskyet',
+            label = 'Overskyet 1',
             value = "OVERCAST",
-            description = 'Ikke meget sol at se!'
+            description = 'Overskyet 1!'
         },
         [7] = {
             icon = '☁️',
-            label = 'Overskyet',
+            label = 'Overskyet 2',
             value = "CLOUDS",
-            description = 'Ingen sol bryder den sky'
+            description = 'Overskyet 2'
         },
         [8] = {
             icon = '🌤️',
-            label = 'Opklaring',
+            label = 'Oppklaret',
             value = "CLEARING",
-            description = 'Det ser ud til at det bliver godt vejr!'
+            description = 'Oppklaret!'
         },
         [9] = {
             icon = '☂️',
@@ -299,28 +297,28 @@ menu_button11:On("select",function()
         local menu_button14 = menu6:AddButton({icon = v.icon,label = v.label,value = v,description = v.description,select = function(btn)
             local selection = btn.Value
             TriggerServerEvent('qb-weathersync:server:setWeather', selection.value)
-            QBCore.Functions.Notify('Vejret blev ændret til: '..selection.label)
+            QBCore.Functions.Notify('Været ble endret: '..selection.label)
         end})
     end
 end)
 
 local menu_button69 = menu:AddButton({
     icon = '🔧',
-    label = 'Udvikler funktioner',
+    label = 'Utvikler Funksjoner',
     value = menu11,
-    description = 'Misc. Dev funktioner'
+    description = 'Misc. Dev Funksjoner'
 })
 local coords_button = menu11:AddButton({
     icon = '📋',
-    label = 'Kopier koord',
+    label = 'Copy Coords',
     value = 'coords',
-    description = 'Kopier koordinatet'
+    description = 'Copy Coords'
 })
 local togglecoords_button = menu11:AddCheckbox({
     icon = '📍',
-    label = 'Vis koords',
+    label = 'Vis Coords',
     value = nil,
-    description = 'Vis koordinater på skærmen'
+    description = 'Vis koordinater på skjermen'
 })
 
 local heading_button = menu11:AddButton({

@@ -21,10 +21,10 @@ RegisterNetEvent('qb-admin:client:toggleBlips')
 AddEventHandler('qb-admin:client:toggleBlips', function()
     if not ShowBlips then
         ShowBlips = true
-        QBCore.Functions.Notify("Blips aktiveret", "success")
+        QBCore.Functions.Notify("Blips aktivert", "success")
     else
         ShowBlips = false
-        QBCore.Functions.Notify("Blips deaktiveret", "error")
+        QBCore.Functions.Notify("Blips deaktivert", "error")
     end
 end)
 
@@ -32,10 +32,10 @@ RegisterNetEvent('qb-admin:client:toggleNames')
 AddEventHandler('qb-admin:client:toggleNames', function()
     if not ShowNames then
         ShowNames = true
-        QBCore.Functions.Notify("Navne aktiveret", "success")
+        QBCore.Functions.Notify("Navn Aktivert", "success")
     else
         ShowNames = false
-        QBCore.Functions.Notify("Navne deaktiveret", "error")
+        QBCore.Functions.Notify("Navn Aktivert", "error")
     end
 end)
 

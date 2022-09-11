@@ -71,10 +71,10 @@ AddEventHandler('qb-admin:client:SaveCar', function()
         if QBCore.Shared.Vehicles[vehname] ~= nil and next(QBCore.Shared.Vehicles[vehname]) ~= nil then
             TriggerServerEvent('qb-admin:server:SaveCar', props, QBCore.Shared.Vehicles[vehname], `veh`, plate)
         else
-            QBCore.Functions.Notify('Du kan ikke gemme dette køretøj..', 'error')
+            QBCore.Functions.Notify('Du kan ikke gjemme kjøretøyet..', 'error')
         end
     else
-        QBCore.Functions.Notify('Du er ikke i et køretøj..', 'error')
+        QBCore.Functions.Notify('Du er ikke i et kjøretøy..', 'error')
     end
 end)
 
